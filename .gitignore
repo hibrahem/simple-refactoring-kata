@@ -1,2 +1,44 @@
-# Project exclude paths
-/target/
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+*.ipr
+
+# Build directories
+target/
+build/
+classes/
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Dependency caches
+.gradle/
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Spring Boot
+spring.log
+
+# H2 database files (if you persist locally during tests)
+*.mv.db
+*.h2.db
+
+# Coverage / test reports
+jacoco.exec
+*.coverage
+*.coverage.xml
+test-output/
+surefire-reports/
