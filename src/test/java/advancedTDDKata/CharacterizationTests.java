@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -45,7 +46,6 @@ public class CharacterizationTests {
     public void setup() {
         jdbcTemplate.execute("DELETE from user where true");
         // Reset the hibernate_sequence
-        jdbcTemplate.execute("ALTER TABLE hibernate_sequence AUTO_INCREMENT = 1");
         TestObserver.reset();
 
         request = new MockHttpServletRequest();
